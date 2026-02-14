@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT MODE (default) - For white backgrounds */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(165, 165, 165, 0.5); /* soft light-gray */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(36, 36, 36, 0.5); /* medium gray */
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4); /* darker on hover */
+}
+
+/* DARK MODE (Tailwind's `.dark` class) */
+.dark ::-webkit-scrollbar-track {
+  background: rgba(7, 7, 7, 0.08); /* subtle white */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(26, 26, 26, 0.25); /* soft white */
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(2, 2, 2, 0.4); /* brighter on hover */
+}
+
+.dark ::-webkit-scrollbar-corner {
+  background: transparent;
+}
